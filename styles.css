@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, 
+        #0000ff 0%,    
+        #ff0000 33%,  
+        #00ff00 66%,    
+        #000000 100%    
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background: orange;
+  top: 70px;
+  left: 70px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+.star_12 {
+  background: rgb(255, 255, 255);
+  width: 170px;
+  height: 80px;
+  position: relative;
+  animation: spin 3s linear infinite;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 
+    68% 57%, 79% 91%, 50% 70%, 
+    21% 91%, 32% 57%, 2% 35%, 
+    39% 35%
+  );
+}
+
+/* Spin animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  animation: spin 1.5s linear infinite;
+}
